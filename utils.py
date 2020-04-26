@@ -80,6 +80,7 @@ class InputsGenerator:
         else:
             logger.info('Using only 1 thread.')
             for s in self.speaker_ids:
+                print(s)
                 self.generate_and_dump_inputs_to_pkl(s)
         from glob import glob
 

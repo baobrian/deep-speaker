@@ -72,6 +72,8 @@ def inference_unseen_speakers(audio_reader, sp1, sp2):
     emb2 = np.mean(emb_sp2, axis=0)
 
     logger.info('Cosine = {}'.format(cosine(emb1, emb2)))
+    # print(cosine(emb1,emb2))
+    return cosine(emb1,emb2)
 
     # print('SAP =', np.mean([cosine(u, v) for (u, v) in zip(emb_sp1[:-1], emb_sp1[1:])]))
     # print('SAN =', np.mean([cosine(u, v) for (u, v) in zip(emb_sp1, emb_sp2)]))
